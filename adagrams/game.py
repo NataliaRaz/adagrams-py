@@ -44,7 +44,6 @@ def draw_letters():
         pool.pop(index) 
 
     return letter_bank
-#print(draw_letters())
 
 def uses_available_letters(word, letter_bank):
     
@@ -98,7 +97,6 @@ def get_highest_word_score(word_list):
             best_word = word
             best_score = current_score
         elif current_score == best_score:
-            # Prefer 10-letter words in ties
             if len(word) == 10 and len(best_word) != 10:
                 best_word = word
             elif len(best_word) != 10 and len(word) < len(best_word):
